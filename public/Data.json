@@ -1,0 +1,263 @@
+[
+  {
+      "id": 1,
+      "adventureTitle": "Himalayan Sunrise Trek",
+      "image": "https://i.ibb.co/C9pZf7C/1-Himalayan.png",
+      "categoryName": "Mountain Trek",
+      "shortDescription": "Embark on a breathtaking journey through the Himalayas to witness a magical sunrise over snow-capped peaks. This eco-friendly trek takes you through serene villages, lush forests, and awe-inspiring mountain landscapes. Perfect for nature lovers seeking a balance of adventure and tranquility.",
+      "adventureCost": 1200,
+      "bookingAvailability": "Available",
+      "location": "Nepal",
+      "duration": "7 Days",
+      "adventureLevel": "Moderate",
+      "includedItems": [
+          "Guide services",
+          "Eco-friendly accommodations",
+          "Organic meals",
+          "Trekking permits"
+      ],
+      "ecoFriendlyFeatures": [
+          "No single-use plastics",
+          "Local community support",
+          "Solar-powered campsites"
+      ],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+          "Carry reusable water bottles.",
+          "Pack light and eco-friendly items.",
+          "Respect local cultures."
+      ]
+  },
+  {
+      "id": 2,
+      "adventureTitle": "Andes Glacial Adventure",
+      "image": "https://i.ibb.co/Rb7W5yQ/2-Andes.jpg",
+      "categoryName": "Mountain Trek",
+      "shortDescription": "Venture into the icy wilderness of the Andes and explore majestic glaciers on this challenging trek. This adventure offers breathtaking views, encounters with unique flora and fauna, and a deep connection with untouched nature. Ideal for experienced trekkers seeking a thrilling eco-friendly experience.",
+      "adventureCost": 1400,
+      "bookingAvailability": "Limited",
+      "location": "Peru",
+      "duration": "5 Days",
+      "adventureLevel": "Challenging",
+      "includedItems": [
+          "Tents and sleeping bags",
+          "Expert guide",
+          "All meals",
+          "Emergency kits"
+      ],
+      "ecoFriendlyFeatures": [
+          "Low-impact trekking paths",
+          "Minimal-waste meals",
+          "Community support initiatives"
+      ],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+          "Wear insulated layers.",
+          "Use biodegradable toiletries.",
+          "Avoid disturbing wildlife."
+      ]
+  },
+  {
+      "id": 3,
+      "adventureTitle": "Alpine Meadows Expedition",
+      "image": "https://i.ibb.co/6D4bcp7/3-Meadows.jpg",
+      "categoryName": "Mountain Trek",
+      "shortDescription": "Discover the beauty of Switzerland’s alpine meadows, blooming with vibrant wildflowers and set against majestic mountain backdrops. This leisurely trek is perfect for those seeking a peaceful, eco-friendly escape into nature. Enjoy scenic trails, fresh air, and unforgettable vistas.",
+      "adventureCost": 800,
+      "bookingAvailability": "Available",
+      "location": "Switzerland",
+      "duration": "3 Days",
+      "adventureLevel": "Easy",
+      "includedItems": [
+          "Local guide",
+          "Eco-friendly accommodations",
+          "Breakfast and snacks",
+          "Trail maps"
+      ],
+      "ecoFriendlyFeatures": [
+          "Electric-powered transport",
+          "No trace camping",
+          "Reusable gear provided"
+      ],
+      "maxGroupSize": 15,
+      "specialInstructions": [
+          "Bring sturdy hiking boots.",
+          "Keep noise levels low.",
+          "Carry your trash back."
+      ]
+  },
+  {
+      "id": 4,
+      "adventureTitle": "Rockies Wildlife Trek",
+      "image": "https://i.ibb.co/vzvxDCV/4-Rocky.jpg",
+      "categoryName": "Mountain Trek",
+      "shortDescription": "Explore the rugged Rockies while spotting diverse wildlife in their natural habitats. This eco-conscious trek offers opportunities to connect with pristine nature, learn about conservation efforts, and enjoy breathtaking mountain vistas. Ideal for adventurous nature enthusiasts.",
+      "adventureCost": 1000,
+      "bookingAvailability": "Available",
+      "location": "Canada",
+      "duration": "4 Days",
+      "adventureLevel": "Moderate",
+      "includedItems": [
+          "Professional guide",
+          "Camping gear",
+          "Wildlife viewing equipment",
+          "Meals"
+      ],
+      "ecoFriendlyFeatures": [
+          "Wildlife-friendly practices",
+          "Biodegradable waste systems",
+          "Leave-no-trace ethics"
+      ],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+          "Do not feed animals.",
+          "Stay on marked trails.",
+          "Use eco-friendly sunscreens."
+      ]
+  },
+  {
+      "id": 5,
+      "adventureTitle": "Kilimanjaro Eco Trek",
+      "image": "https://i.ibb.co/6WVM8hh/5-Kilimanjan.jpg",
+      "categoryName": "Mountain Trek",
+      "shortDescription": "Challenge yourself to conquer Mount Kilimanjaro, Africa’s highest peak, while supporting sustainable tourism. This guided eco-trek provides breathtaking views, cultural immersion, and a once-in-a-lifetime achievement for experienced climbers.",
+      "adventureCost": 2500,
+      "bookingAvailability": "Available",
+      "location": "Tanzania",
+      "duration": "10 Days",
+      "adventureLevel": "Difficult",
+      "includedItems": [
+          "Certified guide and porters",
+          "Eco-friendly lodges",
+          "Meals and hydration",
+          "Climbing permits"
+      ],
+      "ecoFriendlyFeatures": [
+          "Local community support",
+          "Waste reduction programs",
+          "Sustainable gear provided"
+      ],
+      "maxGroupSize": 6,
+      "specialInstructions": [
+          "Prepare for high altitude.",
+          "Avoid plastic packaging.",
+          "Respect local traditions."
+      ]
+  },
+  {
+      "id": 6,
+      "adventureTitle": "Patagonia Wilderness Hike",
+      "image": "https://i.ibb.co/YpmD7Wn/6-Patagonia.jpg",
+      "categoryName": "Mountain Trek",
+      "shortDescription": "Explore Patagonia’s stunning wilderness, filled with dramatic landscapes and serene beauty. This eco-adventure promotes minimal environmental impact while offering an unforgettable experience in one of the world’s most remote regions.",
+      "adventureCost": 1800,
+      "bookingAvailability": "Limited",
+      "location": "Chile",
+      "duration": "6 Days",
+      "adventureLevel": "Challenging",
+      "includedItems": [
+          "Guide services",
+          "Campsite arrangements",
+          "Cooked meals",
+          "Trekking permits"
+      ],
+      "ecoFriendlyFeatures": [
+          "Sustainable camp setups",
+          "Minimal-waste food packaging",
+          "Support for local communities"
+      ],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+          "Carry warm clothing.",
+          "Respect park regulations.",
+          "Avoid touching flora and fauna."
+      ]
+  },
+  {
+      "id": 7,
+      "adventureTitle": "Mount Fuji Cultural Trek",
+      "image": "https://i.ibb.co/wyj6FZX/7-Mount-Fuji.jpg",
+      "categoryName": "Mountain Trek",
+      "shortDescription": "Climb the iconic Mount Fuji and immerse yourself in the cultural heritage of Japan. This trek combines natural beauty with eco-conscious practices, offering an enriching experience for those seeking both adventure and cultural insights.",
+      "adventureCost": 900,
+      "bookingAvailability": "Available",
+      "location": "Japan",
+      "duration": "2 Days",
+      "adventureLevel": "Moderate",
+      "includedItems": [
+          "Local guide",
+          "Traditional meals",
+          "Overnight stay in eco-lodges",
+          "Cultural insights"
+      ],
+      "ecoFriendlyFeatures": [
+          "Reusable equipment",
+          "Eco-conscious accommodations",
+          "Locally-sourced meals"
+      ],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+          "Pack for cold weather.",
+          "Follow cultural guidelines.",
+          "Do not leave any waste."
+      ]
+  },
+  {
+      "id": 8,
+      "adventureTitle": "Dolomites Scenic Trek",
+      "image": "https://i.ibb.co/SK7Xg8p/8-Dolomites.jpg",
+      "categoryName": "Mountain Trek",
+      "shortDescription": "Walk through the spectacular Dolomites, where dramatic cliffs and lush meadows await. This eco-friendly trek offers serene trails and stunning panoramas, perfect for a rejuvenating and sustainable mountain adventure.",
+      "adventureCost": 1100,
+      "bookingAvailability": "Available",
+      "location": "Italy",
+      "duration": "5 Days",
+      "adventureLevel": "Easy",
+      "includedItems": [
+          "Local guide",
+          "Eco-accommodation",
+          "Meals and snacks",
+          "Trail maps"
+      ],
+      "ecoFriendlyFeatures": [
+          "Electric shuttles",
+          "Zero-waste policy",
+          "Local economic support"
+      ],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+          "Use trail-appropriate footwear.",
+          "Do not pick plants.",
+          "Keep noise levels low."
+      ]
+  },
+  {
+      "id": 9,
+      "adventureTitle": "Pyrenees Heritage Trek",
+      "image": "https://i.ibb.co/DWQj4tD/9-Pyrenees.webp",
+      "categoryName": "Mountain Trek",
+      "shortDescription": "Journey through the scenic Pyrenees, rich in heritage and natural beauty. This trek balances adventure with eco-conscious practices, allowing you to experience historical landmarks and breathtaking mountain trails responsibly.",
+      "adventureCost": 1300,
+      "bookingAvailability": "Limited",
+      "location": "Spain/France",
+      "duration": "6 Days",
+      "adventureLevel": "Moderate",
+      "includedItems": [
+          "Guide services",
+          "Heritage site tours",
+          "Accommodations",
+          "Meals"
+      ],
+      "ecoFriendlyFeatures": [
+          "Energy-efficient accommodations",
+          "Heritage preservation contributions",
+          "Eco-travel gear included"
+      ],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+          "Respect local customs.",
+          "Do not damage heritage sites.",
+          "Travel light and responsibly."
+      ]
+  }
+]
