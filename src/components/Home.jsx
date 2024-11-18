@@ -1,15 +1,12 @@
-import React, { useEffect } from 'react';
+
 import Banner from './Banner';
+import AdvantureExp from './AdvantureExp';
 
 const Home = () => {
-    useEffect(()=> {
-        fetch ('Data.json')
-        .then (req => req.json())
-        .then (res => console.log(res));
-    }, [])
     return (
         <div>
             <Banner></Banner>
+            <AdvantureExp></AdvantureExp>
         </div>
     );
 };
