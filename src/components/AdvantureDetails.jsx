@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { SiGooglemeet } from 'react-icons/si';
 import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 
@@ -10,25 +11,39 @@ const AdvantureDetails = () => {
 
     const handleTalkWithExpert = (e) => {
         e.preventDefault();
-        const now = new Date();
+        // const now = new Date();
 
-        const currentHours = now.getHours();
-        const currentMinutes = now.getMinutes();
+        // const currentHours = now.getHours();
+        // const currentMinutes = now.getMinutes();
 
 
-        if (currentHours >= 10 && 20 >= currentHours) {
-            if (currentHours == 20 && currentMinutes >= 1) {
-                alert('Experts are not avialable please try in Time');
-            }
-            else {
+        // if (currentHours >= 10 && 20 >= currentHours) {
+        //     if (currentHours == 20 && currentMinutes >= 1) {
+        //         alert('Experts are not avialable please try in Time');
+        //     }
+        //     else {
 
-                window.open('https://meet.google.com/nkx-dhsy-ivo', '_blank');
-            }
+        //         window.open('https://meet.google.com/nkx-dhsy-ivo', '_blank');
+        //     }
 
-        }
-        else {
-            alert('Experts are not avialable please try in Time');
-        }
+        // }
+        // else {
+        //     alert('Experts are not avialable please try in Time');
+        // }
+
+        
+        const now = moment();
+        const startTime = moment('10:00 AM', 'h:mm A');
+        const endTime = moment('8:00 PM', 'h:mm A');
+        
+        
+        if (now.isBetween(startTime, endTime)) {
+            window.open('https://meet.google.com/nkx-dhsy-ivo', '_blank');
+          } 
+          
+          else {
+            alert("The current time is outside the range.");
+          }
 
     }
 

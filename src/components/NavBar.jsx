@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
 
 const NavBar = () => {
+
+    const { signOutUser, user } = useContext(AuthContext);
     const allmenus = <>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link>Update Profile</Link></li>
         <li><Link>User Profile</Link></li>
 
     </>
+
+    const handleSignOut = (e) => {
+        e.preventDefault();
+        signOutUser()
+        .then(() => {
+            // Sign-out successful.
+        }).catch((error) => {
+            // An error happened.
+        });
+    }
+
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -67,7 +82,11 @@ const NavBar = () => {
                         </ul>
                     </div>
 
-                    <a className="btn text-xl">Button</a>
+                    {
+                        user ? <button onClick={handleSignOut} className="btn text-xl">Logout</button>:<Link to={'/login'} className="btn text-xl">Login</Link>
+                    }
+
+                    
                 </div>
             </div>
         </div >
