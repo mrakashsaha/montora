@@ -47,16 +47,16 @@ const AdvantureDetails = () => {
     }
 
     return (
-        <div className="space-y-10">
-            <div className="relative h-96 bg-cover bg-center" style={{ backgroundImage: `url(${adventure.image})` }}>
+        <div className="">
+            <div className="relative h-96 lg:h-[600px] bg-cover bg-center" style={{ backgroundImage: `url(${adventure.image})` }}>
                 <div className="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-center text-white">
                     <h1 className="text-5xl font-bold">{adventure.adventureTitle}</h1>
                     <p className="text-2xl font-medium">{adventure.categoryName}</p>
                 </div>
             </div>
-
+            <div className='container mx-auto px-4 md:px-0 space-y-10 mt-4'>
             <div>
-                <h2 className="text-5xl font-bold my-4 text-center">About the Adventure</h2>
+                <h2 className="text-5xl font-bold my-4 text-center pt-4">About the Adventure</h2>
                 <p className='text-3xl p-6 text-center mx-auto'>{adventure.shortDescription}</p>
             </div>
 
@@ -134,8 +134,9 @@ const AdvantureDetails = () => {
                     <p>Time: 10:00am - 8:00pm</p>
                 </div>
                 <div>
-                    <button onClick={handleTalkWithExpert} className='btn text-3xl'><SiGooglemeet></SiGooglemeet>  Talk with Expert</button>
+                    <button onClick={handleTalkWithExpert} className='btn text-2xl'><SiGooglemeet className='hidden md:block'></SiGooglemeet>  Talk with Expert</button>
                 </div>
+            </div>
             </div>
         </div>
     );
