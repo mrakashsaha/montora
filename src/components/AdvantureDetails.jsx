@@ -1,10 +1,9 @@
 import moment from 'moment';
 import { SiGooglemeet } from 'react-icons/si';
-import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 
 const AdvantureDetails = () => {
-    const navigate = useNavigate();
     const data = useLoaderData();
     const { id } = useParams();
     const adventure = data.find((data) => data.id == id);

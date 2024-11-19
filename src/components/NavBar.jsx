@@ -4,7 +4,7 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const NavBar = () => {
 
-    const { signOutUser, user } = useContext(AuthContext);
+    const { signOutUser, user, loading } = useContext(AuthContext);
     const allmenus = <>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link>Update Profile</Link></li>
@@ -15,11 +15,11 @@ const NavBar = () => {
     const handleSignOut = (e) => {
         e.preventDefault();
         signOutUser()
-        .then(() => {
-            // Sign-out successful.
-        }).catch((error) => {
-            // An error happened.
-        });
+            .then(() => {
+                // Sign-out successful.
+            }).catch((error) => {
+                // An error happened.
+            });
     }
 
 
@@ -67,11 +67,11 @@ const NavBar = () => {
 
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img
-                                    alt="Tailwind CSS Navbar component"
-                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                            </div>
+                            {
+                                user && <div className="w-10 rounded-full">
+                                    <img alt="profile" src={user?.photoURL} />
+                                </div>
+                            }
                         </div>
                         <ul
                             tabIndex={0}
@@ -83,10 +83,10 @@ const NavBar = () => {
                     </div>
 
                     {
-                        user ? <button onClick={handleSignOut} className="btn text-xl">Logout</button>:<Link to={'/login'} className="btn text-xl">Login</Link>
+                        !loading && (user ? <button onClick={handleSignOut} className="btn text-xl">Logout</button> : <Link to={'/login'} className="btn text-xl">Login</Link>)
                     }
 
-                    
+
                 </div>
             </div>
         </div >

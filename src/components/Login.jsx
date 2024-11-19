@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import bgImage from '../assets/banner/slider-2.webp'
 import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
@@ -7,6 +7,11 @@ import { GoogleAuthProvider } from 'firebase/auth';
 const Login = () => {
 
     const { signInUser, setUser, signInWithGoogle } = useContext(AuthContext);
+
+    const location = useLocation();
+    console.log (location.state)
+
+    const navigate = useNavigate();
 
     const handleLoginWithEmail = (e) => {
         e.preventDefault();
@@ -20,6 +25,7 @@ const Login = () => {
 
                 const user = userCredential.user;
                 setUser(user);
+                navigate(location?.state ? location.state : '/');
 
 
             })
@@ -41,6 +47,8 @@ const Login = () => {
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const user = result.user;
                 setUser(user);
+                navigate(location?.state ? location.state : '/');
+
 
             })
 

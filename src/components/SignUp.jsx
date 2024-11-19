@@ -1,27 +1,31 @@
 import React, { useContext } from 'react';
 import bgImage from '../assets/banner/slider-3.webp';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const SignUp = () => {
 
-    const { createNewUser, setUser, signInWithGoogle } = useContext(AuthContext);
+    const { createNewUser, setUser, signInWithGoogle, updateUserProfile} = useContext(AuthContext);
 
+    const navigate = useNavigate();
     const handleSignUpWithEmail = (e) => {
         e.preventDefault();
         const form = new FormData(e.target);
         const name = form.get('name');
         const email = form.get('email');
-        const photoURL = form.get('photo-url');
+        const photo = form.get('photo-url');
         const password = form.get('password');
-        console.log(name, email, photoURL, password);
+        console.log(name, email, password);
 
 
         createNewUser(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
                 setUser(user);
+                updateUserProfile ({displayName: name, photoURL: photo})
+                .then (()=> navigate('/'))
+                .catch((error)=>console.log (error));
 
             })
             .catch((error) => {
@@ -31,6 +35,8 @@ const SignUp = () => {
                 console.log(errorMessage)
                 // ..
             });
+
+            
     }
     const googleProvider = new GoogleAuthProvider();
     const handleSignUpWithGoogle = (e) => {

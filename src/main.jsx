@@ -8,6 +8,7 @@ import AdvantureDetails from './components/AdvantureDetails';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import AuthProvider from './provider/AuthProvider';
+import PrivateRoute from './components/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/adventure/:id',
-          element: <AdvantureDetails></AdvantureDetails>,
+          element: <PrivateRoute><AdvantureDetails></AdvantureDetails></PrivateRoute>,
           loader: ({ params }) => fetch('/Data.json'),
         },
         {
