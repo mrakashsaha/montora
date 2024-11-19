@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import Root from './layout/Root';
 import Home from './components/Home';
+import AdvantureDetails from './components/AdvantureDetails';
 
 
 const router = createBrowserRouter([
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
               {
                   path: '/',
                   element: <Home></Home>
+              },
+              {
+                  path: '/adventure/:id',
+                  element: <AdvantureDetails></AdvantureDetails>,
+                  loader: ({params})=> fetch ('/Data.json'),
               },
               {
                   path: '/login',

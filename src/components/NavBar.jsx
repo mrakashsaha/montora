@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const allmenus = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+        <li><Link to={'/'}>Home</Link></li>
+        <li><Link>Update Profile</Link></li>
+        <li><Link>User Profile</Link></li>
+
     </>
     return (
         <div>
@@ -26,16 +29,16 @@ const NavBar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-lg dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             {
                                 allmenus
                             }
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Montora</a>
+                    <Link to={'/'} className="btn btn-ghost text-3xl">Montora</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="text-xl menu menu-horizontal px-1">
 
                         {
                             allmenus
@@ -57,14 +60,14 @@ const NavBar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-32 p-2 shadow">
+                            className="menu menu-md dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-32 p-2 shadow">
                             <li><a>Profile</a></li>
                             <li><a>Settings</a></li>
                             <li><a>Logout</a></li>
                         </ul>
                     </div>
 
-                    <a className="btn">Button</a>
+                    <a className="btn text-xl">Button</a>
                 </div>
             </div>
         </div >

@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ExpCard = ({ cardData }) => {
-    const { adventureTitle, image, ecoFriendlyFeatures } = cardData;
+    const {id, adventureTitle, image, ecoFriendlyFeatures } = cardData;
     console.log (ecoFriendlyFeatures);
     return (
         <div>
@@ -15,11 +16,11 @@ const ExpCard = ({ cardData }) => {
                     <h2 className="card-title">{adventureTitle}</h2>
                         <ul>
                             {
-                                ecoFriendlyFeatures.map ((x)=><li>{x}</li>)
+                                ecoFriendlyFeatures.map ((x, idx)=><li key={idx}>{x}</li>)
                             }
                         </ul>
                     <div className="card-actions">
-                        <button className="btn btn-primary">Explore Now</button>
+                        <Link to={`/adventure/${id}`} className="btn btn-primary">Explore Now</Link>
                     </div>
                 </div>
             </div>
