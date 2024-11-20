@@ -5,6 +5,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { IoCloseCircle } from 'react-icons/io5';
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
@@ -107,16 +108,16 @@ const Login = () => {
                                     </label>
                                 </div>
                                 <div className="form-control mt-4">
-                                    <button className="btn btn-primary">Login</button>
+                                    <button className="btn btn-primary text-white border-none hover:bg-[#ff8900] bg-[#04335E]">Login</button>
                                 </div>
 
                             </form>
                             <div className='border-t border-1 border-blue-600 border-dotted mt-4'></div>
                             <div className="form-control mt-2">
-                                <button onClick={handleSignInWithGoogle} className="btn btn-primary">Login with Google</button>
+                                <button onClick={handleSignInWithGoogle} className="btn btn-primary text-white border-none hover:bg-[#b9362a] bg-[#EA4335]"> <FaGoogle></FaGoogle> Login with Google</button>
                             </div>
                             <label className="label">
-                                <p>Are you new here? <Link to={'/register'} className='underline text-blue-600'>Sign Up</Link> </p>
+                                <p>Are you new here? <Link to={'/register'} className='underline text-[#EA4335]'>Sign Up</Link> </p>
                             </label>
                             <dialog id="my_modal_5" className="modal modal-middle">
                                 <div className="modal-box">
@@ -127,7 +128,7 @@ const Login = () => {
                                         </div>
                                         <p className='pt-2 text-blue-600'>{modalMessage}</p>
                                         <div className="form-control mt-4">
-                                            <button className="btn btn-primary">Submit</button>
+                                            <button className="btn btn-primary text-white border-none hover:bg-[#ff8900] bg-[#04335E]">Submit</button>
                                         </div>
                                     </form>
                                     <div className="modal-action">

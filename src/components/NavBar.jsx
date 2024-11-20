@@ -69,27 +69,20 @@ const NavBar = () => {
 
                     {/*  */}
 
-                    <div className="dropdown dropdown-end">
-                        <div className="mx-4 tooltip tooltip-left" data-tip={user?.displayName}>
-                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                    {user && <div className="dropdown-end">
+                        <div className="mx-4 tooltip tooltip-bottom" data-tip={user?.displayName}>
+                            <Link to={'/profile'} className="btn btn-ghost btn-circle avatar">
                                 {
                                     user && <div className="w-10 md:w-14 rounded-full">
                                         <img alt="profile" src={user?.photoURL} />
                                     </div>
                                 }
-                            </div>
+                            </Link>
                         </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-md dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-36 p-2 shadow">
-                            <li><Link to={'/profile'}>Profile</Link></li>
-                            <li><Link to={'/update-profile'}>Update Profile</Link></li>
-                            <li><Link onClick={handleSignOut}>Logout</Link></li>
-                        </ul>
-                    </div>
+                    </div>}
 
                     {
-                        !loading && (user ? <button onClick={handleSignOut} className="btn btn-md bg-red-500 text-white text-lg">Logout</button> : <Link to={'/login'} className="btn btn-md bg-red-500 text-white text-lg">Login</Link>)
+                        !loading && (user ? <button onClick={handleSignOut} className="btn btn-md hover:bg-[#ff8900] bg-[#549064] text-white text-lg">Logout</button> : <Link to={'/login'} className="btn btn-md hover:bg-[#ff8900] bg-[#549064] border-none rounded-none text-white text-lg">Login</Link>)
                     }
 
 

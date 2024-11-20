@@ -3,6 +3,7 @@ import bgImage from '../assets/banner/slider-3.webp';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { FaGoogle } from 'react-icons/fa';
 
 const SignUp = () => {
 
@@ -90,21 +91,18 @@ const SignUp = () => {
                                         <span className="">Password</span>
                                     </label>
                                     <input name='password' type="password" placeholder="Enter Password" className="input input-bordered" required />
-                                    <label className="label">
-                                        <a href="#" className="link link-hover">Forgot password?</a>
-                                    </label>
                                 </div>
                                 <div className="form-control mt-4">
-                                    <button className="btn btn-primary">Sign Up</button>
+                                    <button className="btn btn-primary text-white border-none hover:bg-[#ff8900] bg-[#04335E]">Sign Up</button>
                                 </div>
 
                             </form>
                             <div className='border-t border-1 border-blue-600 border-dotted mt-4'></div>
                             <div className="form-control mt-2">
-                                <button onClick={handleSignUpWithGoogle} className="btn btn-primary">Sign Up with Google</button>
+                                <button onClick={handleSignUpWithGoogle} className="btn btn-primary hover:bg-[#b9362a] bg-[#EA4335] text-white border-none"> <FaGoogle></FaGoogle> Sign Up with Google</button>
                             </div>
                             <label className="label">
-                                <p>Already have an Account? <Link to={'/login'} className='underline text-blue-600'>Login</Link> </p>
+                                <p>Already have an Account? <Link to={'/login'} className='underline text-[#EA4335]'>Login</Link> </p>
                             </label>
                         </div>
                     </div>

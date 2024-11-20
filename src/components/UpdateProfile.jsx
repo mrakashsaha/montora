@@ -44,7 +44,7 @@ const UpdateProfile = () => {
                                     <input name='photo-url' type="text" placeholder="Enter Photo URL" className="glass input input-bordered" required />
                                 </div>
                                 <div className="form-control mt-4">
-                                    <button className="btn btn-primary">Update</button>
+                                    <button className="btn btn-primary text-white border-none hover:bg-[#ff8900] bg-[#04335E]">Update</button>
                                 </div>
 
                             </form>

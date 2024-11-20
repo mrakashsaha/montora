@@ -15,7 +15,7 @@ const AdvantureExp = () => {
     return (
         <div className='container mx-auto px-4 md:px-0 my-8'>
             <div>
-                <h1 className='text-lg md:text-2xl font-semibold text-center uppercase'>Explore wonderful experience</h1>
+                <h1 className='text-[#ff8900] text-lg md:text-2xl font-semibold text-center uppercase'>Explore wonderful experience</h1>
                 <p className='text-3xl md:text-4xl lg:text-6xl font-bold text-center md:w-3/4 lg:w-1/2 p-4 mx-auto'>Visit Popular Mountains of the World.
                 </p>
             </div>

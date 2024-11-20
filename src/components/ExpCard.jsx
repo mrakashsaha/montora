@@ -21,7 +21,7 @@ const ExpCard = ({ cardData }) => {
                             }
                         </ul>
                     <div className="card-actions pt-4">
-                        <Link to={`/adventure/${id}`} className="btn w-full btn-primary">Explore Now</Link>
+                        <Link to={`/adventure/${id}`} className="btn btn-primary w-full text-white border-none hover:bg-[#ff8900] bg-[#04335E]">Explore Now</Link>
                     </div>
                 </div>
             </div>
