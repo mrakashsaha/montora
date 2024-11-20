@@ -1,14 +1,18 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
+
 const NavBar = () => {
+    const navigate = useNavigate();
 
     const { signOutUser, user, loading } = useContext(AuthContext);
+
+
     const allmenus = <>
-        <li><Link to={'/'}>Home</Link></li>
-        <li><Link>Update Profile</Link></li>
-        <li><Link>User Profile</Link></li>
+        <li><NavLink to={'/'}>Home</NavLink></li>
+        <li><NavLink to={'/profile'} >My Profile</NavLink></li>
+        <li><NavLink to={'/update-profile'}>Update Profile</NavLink></li>
 
     </>
 
@@ -16,7 +20,7 @@ const NavBar = () => {
         e.preventDefault();
         signOutUser()
             .then(() => {
-                // Sign-out successful.
+                navigate('/');
             }).catch((error) => {
                 // An error happened.
             });
@@ -66,24 +70,26 @@ const NavBar = () => {
                     {/*  */}
 
                     <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            {
-                                user && <div className="w-10 rounded-full">
-                                    <img alt="profile" src={user?.photoURL} />
-                                </div>
-                            }
+                        <div className="mx-4 tooltip tooltip-left" data-tip={user?.displayName}>
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                {
+                                    user && <div className="w-10 md:w-14 rounded-full">
+                                        <img alt="profile" src={user?.photoURL} />
+                                    </div>
+                                }
+                            </div>
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-md dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-32 p-2 shadow">
-                            <li><a>Profile</a></li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
+                            className="menu menu-md dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-36 p-2 shadow">
+                            <li><Link to={'/profile'}>Profile</Link></li>
+                            <li><Link to={'/update-profile'}>Update Profile</Link></li>
+                            <li><Link onClick={handleSignOut}>Logout</Link></li>
                         </ul>
                     </div>
 
                     {
-                        !loading && (user ? <button onClick={handleSignOut} className="btn text-xl">Logout</button> : <Link to={'/login'} className="btn text-xl">Login</Link>)
+                        !loading && (user ? <button onClick={handleSignOut} className="btn btn-md bg-red-500 text-white text-lg">Logout</button> : <Link to={'/login'} className="btn btn-md bg-red-500 text-white text-lg">Login</Link>)
                     }
 
 
