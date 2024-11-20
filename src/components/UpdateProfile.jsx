@@ -3,6 +3,7 @@ import bgImage from '../assets/banner/slider-2.webp';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast } from 'react-toastify';
+import PageTitle from './PageTitle';
 
 const UpdateProfile = () => {
 
@@ -26,6 +27,7 @@ const UpdateProfile = () => {
     }
     return (
         <div>
+            <PageTitle title={'Montora | Update Profile'}></PageTitle>
             <div style={{ backgroundImage: `url(${bgImage})` }} className="hero bg-base-200 min-h-screen">
                 <div className=" hero-content flex-col">
                     <h1 className="text-2xl font-bold  mx-auto">Update Your Profile</h1>

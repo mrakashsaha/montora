@@ -6,6 +6,7 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { IoCloseCircle } from 'react-icons/io5';
 import { FaGoogle } from 'react-icons/fa';
+import PageTitle from './PageTitle';
 
 const Login = () => {
 
@@ -84,6 +85,7 @@ const Login = () => {
 
     return (
         <div>
+            <PageTitle title={'Montora | Login to account'}></PageTitle>
             <div style={{ backgroundImage: `url(${bgImage})` }} className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col">
                     <h1 className="text-2xl font-bold  mx-auto">Login now!</h1>

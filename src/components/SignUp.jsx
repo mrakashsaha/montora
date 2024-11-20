@@ -5,6 +5,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { FaGoogle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import PageTitle from './PageTitle';
 
 const SignUp = () => {
 
@@ -71,6 +72,7 @@ const SignUp = () => {
 
     return (
         <div>
+            <PageTitle title={'Montora | Sign Up'}></PageTitle>
             <div style={{ backgroundImage: `url(${bgImage})` }} className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col">
                     <h1 className="text-2xl font-bold  mx-auto">Sign Up Today!</h1>

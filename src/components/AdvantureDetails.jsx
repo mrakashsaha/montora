@@ -2,6 +2,7 @@ import moment from 'moment';
 import { SiGooglemeet } from 'react-icons/si';
 import { useLoaderData, useParams } from 'react-router-dom';
 import trip from '../assets/others/trip.png'
+import PageTitle from './PageTitle';
 
 
 const AdvantureDetails = () => {
@@ -50,6 +51,7 @@ const AdvantureDetails = () => {
 
     return (
         <div className="">
+            <PageTitle title={'Montora | Advature Details'}></PageTitle>
             <div className="relative h-96 lg:h-[600px] bg-cover bg-center" style={{ backgroundImage: `url(${adventure.image})` }}>
                 <div className="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-center text-white">
                     <h1 className="text-5xl font-bold">{adventure.adventureTitle}</h1>
