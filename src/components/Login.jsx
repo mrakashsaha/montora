@@ -6,10 +6,10 @@ import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-    const { signInUser, setUser, signInWithGoogle } = useContext(AuthContext);
+    const { signInUser, setUser, signInWithGoogle, resetUserPassword } = useContext(AuthContext);
 
     const location = useLocation();
-    console.log (location.state)
+    console.log(location.state)
 
     const navigate = useNavigate();
 
@@ -38,7 +38,7 @@ const Login = () => {
     }
 
     const googleProvider = new GoogleAuthProvider();
-    
+
     const handleSignInWithGoogle = (e) => {
         e.preventDefault();
 
@@ -61,6 +61,22 @@ const Login = () => {
 
     }
 
+    const handleForgetPassword = (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        resetUserPassword(email)
+            .then(() => {
+                // Password reset email sent!
+                // ..
+                console.log('password reset email sent')
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+            });
+    }
+
     return (
         <div>
             <div style={{ backgroundImage: `url(${bgImage})` }} className="hero bg-base-200 min-h-screen">
@@ -81,7 +97,7 @@ const Login = () => {
                                     </label>
                                     <input name='password' type="password" placeholder="Enter Password" className="input input-bordered" required />
                                     <label className="label">
-                                        <a href="#" className="link link-hover">Forgot password?</a>
+                                        <a onClick={() => document.getElementById('my_modal_5').showModal()} href="#" className="link link-hover">Forgot password?</a>
                                     </label>
                                 </div>
                                 <div className="form-control mt-4">
@@ -96,6 +112,26 @@ const Login = () => {
                             <label className="label">
                                 <p>Are you new here? <Link to={'/register'} className='underline text-blue-600'>Sign Up</Link> </p>
                             </label>
+                            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                                <div className="modal-box">
+                                    <h3 className="font-bold text-lg pb-3">Password Reset</h3>
+                                    <form onSubmit={handleForgetPassword}>
+                                        <div className="form-control">
+                                            <input name='email' type="email" placeholder="Enter Email" className="input input-bordered" required />
+                                        </div>
+                                        <div className="form-control mt-4">
+                                            <button className="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                    <p className="py-4">Press ESC key or click the button below to close</p>
+                                    <div className="modal-action">
+                                        <form method="dialog">
+                                            {/* if there is a button in form, it will close the modal */}
+                                            <button className="btn">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
                         </div>
                     </div>
                 </div>
