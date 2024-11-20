@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 
 const NavBar = () => {
@@ -22,7 +23,7 @@ const NavBar = () => {
             .then(() => {
                 navigate('/');
             }).catch((error) => {
-                // An error happened.
+                toast.error (error);
             });
     }
 

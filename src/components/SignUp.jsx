@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import bgImage from '../assets/banner/slider-3.webp';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { FaGoogle } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const SignUp = () => {
 
     const { createNewUser, setUser, signInWithGoogle, updateUserProfile} = useContext(AuthContext);
-
+    const [error, setError] = useState (false);
     const navigate = useNavigate();
     const handleSignUpWithEmail = (e) => {
         e.preventDefault();
@@ -17,7 +18,15 @@ const SignUp = () => {
         const email = form.get('email');
         const photo = form.get('photo-url');
         const password = form.get('password');
-        console.log(name, email, password);
+        const regex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+
+        if (!regex.test(password)) {
+            setError (true);
+            return;
+        }
+        else {
+            setError (false);
+        }
 
 
         createNewUser(email, password)
@@ -26,15 +35,14 @@ const SignUp = () => {
                 setUser(user);
                 updateUserProfile ({displayName: name, photoURL: photo})
                 .then (()=> navigate('/'))
-                .catch((error)=>console.log (error));
+                .catch((error)=>toast.error(error.code));
 
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(errorCode)
-                console.log(errorMessage)
-                // ..
+                toast.error (error.code);
+                
             });
 
             
@@ -56,6 +64,7 @@ const SignUp = () => {
                 const errorMessage = error.message;
                 const email = error.customData.email;
                 const credential = GoogleAuthProvider.credentialFromError(error);
+                toast.error (error.code);
             });
 
     }
@@ -92,6 +101,9 @@ const SignUp = () => {
                                     </label>
                                     <input name='password' type="password" placeholder="Enter Password" className="input input-bordered" required />
                                 </div>
+                                {
+                                    error && <p className='text-[#EA4335] text-sm pt-2'>Error: Password must contain uppercase, lowercase and at least 6 characters long.</p>
+                                }
                                 <div className="form-control mt-4">
                                     <button className="btn btn-primary text-white border-none hover:bg-[#ff8900] bg-[#04335E]">Sign Up</button>
                                 </div>

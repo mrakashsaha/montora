@@ -60,7 +60,7 @@ const AuthProvider = ({ children }) => {
         resetUserPassword,
     }
 
-    console.log(user);
+
     return (
 
 

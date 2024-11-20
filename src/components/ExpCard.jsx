@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const ExpCard = ({ cardData }) => {
     const {id, adventureTitle, image, ecoFriendlyFeatures } = cardData;
-    console.log (ecoFriendlyFeatures);
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">

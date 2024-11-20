@@ -9,8 +9,6 @@ const AdvantureExp = () => {
             .then(res => setData(res));
     }, []);
 
-    console.log (data);
-
     
     return (
         <div className='container mx-auto px-4 md:px-0 my-8'>

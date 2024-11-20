@@ -12,7 +12,6 @@ const Login = () => {
     const { signInUser, setUser, signInWithGoogle, resetUserPassword } = useContext(AuthContext);
 
     const location = useLocation();
-    console.log(location.state)
 
     const navigate = useNavigate();
 
@@ -23,7 +22,6 @@ const Login = () => {
         const form = new FormData(e.target);
         const email = form.get('email');
         const password = form.get('password');
-        console.log(email, password);
 
         signInUser(email, password)
             .then((userCredential) => {
@@ -37,7 +35,6 @@ const Login = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(error);
                 toast.error('Invalid Email or Password');
             });
 
@@ -63,6 +60,7 @@ const Login = () => {
                 const errorMessage = error.message;
                 const email = error.customData.email;
                 const credential = GoogleAuthProvider.credentialFromError(error);
+                toast.error(error.code);
             });
 
     }

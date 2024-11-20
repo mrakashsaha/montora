@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import bgImage from '../assets/banner/slider-2.webp';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const UpdateProfile = () => {
 
@@ -20,7 +21,7 @@ const UpdateProfile = () => {
             setLoading (false);
             navigate('/profile');
         })
-        .catch((error)=>console.log (error));
+        .catch((error)=>toast.error (error));
             
     }
     return (
