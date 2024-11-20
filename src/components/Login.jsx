@@ -1,8 +1,10 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import bgImage from '../assets/banner/slider-2.webp'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { toast } from 'react-toastify';
+import { IoCloseCircle } from 'react-icons/io5';
 
 const Login = () => {
 
@@ -12,6 +14,8 @@ const Login = () => {
     console.log(location.state)
 
     const navigate = useNavigate();
+
+    const [modalMessage, setModalMessage] = useState('');
 
     const handleLoginWithEmail = (e) => {
         e.preventDefault();
@@ -32,7 +36,8 @@ const Login = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(error)
+                console.log(error);
+                toast.error('Invalid Email or Password');
             });
 
     }
@@ -68,11 +73,12 @@ const Login = () => {
             .then(() => {
                 // Password reset email sent!
                 // ..
-                console.log('password reset email sent')
+                setModalMessage ('Password reset email sent!');
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                setModalMessage (errorCode);
                 // ..
             });
     }
@@ -112,22 +118,22 @@ const Login = () => {
                             <label className="label">
                                 <p>Are you new here? <Link to={'/register'} className='underline text-blue-600'>Sign Up</Link> </p>
                             </label>
-                            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                            <dialog id="my_modal_5" className="modal modal-middle">
                                 <div className="modal-box">
                                     <h3 className="font-bold text-lg pb-3">Password Reset</h3>
                                     <form onSubmit={handleForgetPassword}>
                                         <div className="form-control">
                                             <input name='email' type="email" placeholder="Enter Email" className="input input-bordered" required />
                                         </div>
+                                        <p className='pt-2 text-blue-600'>{modalMessage}</p>
                                         <div className="form-control mt-4">
                                             <button className="btn btn-primary">Submit</button>
                                         </div>
                                     </form>
-                                    <p className="py-4">Press ESC key or click the button below to close</p>
                                     <div className="modal-action">
                                         <form method="dialog">
                                             {/* if there is a button in form, it will close the modal */}
-                                            <button className="btn">Close</button>
+                                            <button onClick={()=>setModalMessage('')} className="btn">Close Window</button>
                                         </form>
                                     </div>
                                 </div>
