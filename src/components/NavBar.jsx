@@ -23,7 +23,7 @@ const NavBar = () => {
             .then(() => {
                 navigate('/');
             }).catch((error) => {
-                toast.error (error);
+                toast.error (error.code);
             });
     }
 
@@ -49,7 +49,7 @@ const NavBar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-lg dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-lg dropdown-content bg-base-100 rounded-box z-[2] mt-3 w-52 p-2 shadow">
                             {
                                 allmenus
                             }
