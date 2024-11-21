@@ -4,6 +4,10 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import trip from '../assets/others/trip.png'
 import PageTitle from './PageTitle';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const AdvantureDetails = () => {
     const data = useLoaderData();
@@ -49,6 +53,10 @@ const AdvantureDetails = () => {
 
     }
 
+    useEffect(() => {
+        AOS.init();
+      }, [])
+
     return (
         <div className="">
             <PageTitle title={'Montora | Advature Details'}></PageTitle>
@@ -65,37 +73,37 @@ const AdvantureDetails = () => {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-xl">
-                    <div className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Location</h2>
                             <p>{adventure.location}</p>
                         </div>
                     </div>
-                    <div className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Duration</h2>
                             <p>{adventure.duration}</p>
                         </div>
                     </div>
-                    <div className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Cost</h2>
                             <p>${adventure.adventureCost}</p>
                         </div>
                     </div>
-                    <div className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Group Size</h2>
                             <p>{adventure.maxGroupSize}</p>
                         </div>
                     </div>
-                    <div className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Level</h2>
                             <p>{adventure.adventureLevel}</p>
                         </div>
                     </div>
-                    <div className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Availability</h2>
                             <p>{adventure.bookingAvailability}</p>
@@ -105,7 +113,7 @@ const AdvantureDetails = () => {
 
 
 
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-2xl'>
+                <div data-aos="fade-left" className='grid grid-cols-1 md:grid-cols-3 gap-6 text-2xl'>
                     {/* Included Items Section */}
                     <div className="bg-base-100 shadow-md rounded-lg p-10">
                         <div>
@@ -117,14 +125,14 @@ const AdvantureDetails = () => {
                     </div>
 
                     {/* Eco-Friendly Features Section */}
-                    <div className="bg-base-100 shadow-md rounded-lg p-10">
+                    <div data-aos="fade-left" className="bg-base-100 shadow-md rounded-lg p-10">
                         <h2 className="text-2xl font-semibold mb-2">Eco-Friendly Features</h2>
                         <ul className="list-disc list-inside space-y-1">
                             {adventure.ecoFriendlyFeatures.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
                     </div>
 
                     {/* Special Instructions Section */}
-                    <div className="bg-base-100 shadow-md rounded-lg p-10">
+                    <div data-aos="fade-left" className="bg-base-100 shadow-md rounded-lg p-10">
                         <h2 className="text-2xl font-semibold mb-2">Special Instructions</h2>
                         <ul className="list-disc list-inside space-y-1">
                             {adventure.specialInstructions.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
@@ -137,9 +145,9 @@ const AdvantureDetails = () => {
                 <div className='space-y-4'>
                     <p className='font-bold text-[#ff8900] uppercase text-lg md:text-2xl' >Plan your trip with us</p>
                     <p className='font-bold text-3xl md:text-5xl uppercase'>Ready for An <br />Unforgetable Tour?</p>
-                    <button onClick={handleTalkWithExpert} className='text-lg text-white btn btn-lg bg-[#1ec28b] hover:bg-[#ff8900] rounded-full'><SiGooglemeet></SiGooglemeet>Talk with Expert</button>
+                    <button data-aos="fade-up" onClick={handleTalkWithExpert} className='text-lg text-white btn btn-lg bg-[#1ec28b] hover:bg-[#ff8900] rounded-full'><SiGooglemeet></SiGooglemeet>Talk with Expert</button>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <img className='w-3/4' src={trip} alt="" />
                 </div>
             </div>

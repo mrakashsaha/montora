@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ExpCard = ({ cardData }) => {
     const {id, adventureTitle, image, ecoFriendlyFeatures } = cardData;
+
+    useEffect(() => {
+        AOS.init();
+      }, [])
+
     return (
-        <div>
+        <div data-aos="flip-left">
             <div className="card bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <div className='w-full h-[250px]'>
