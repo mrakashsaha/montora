@@ -11,7 +11,7 @@ const ExpCard = ({ cardData }) => {
       }, [])
 
     return (
-        <div data-aos="flip-left">
+        <div data-aos="fade-left">
             <div className="card bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <div className='w-full h-[250px]'>
