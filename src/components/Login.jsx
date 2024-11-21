@@ -104,7 +104,7 @@ const Login = () => {
                                         <span className="">Password</span>
                                     </label>
                                     <input name='password' type={visiable ? "text":"password"} placeholder="Enter Password" className="input input-bordered" required />
-                                    <a onClick={()=>setVisiable(!visiable)} className='btn btn-sm btn-circle absolute right-2 top-12' > {visiable ? <IoEye className='text-lg'></IoEye>: <IoEyeOff className='text-lg'></IoEyeOff>}  </a>
+                                    <a onClick={()=>setVisiable(!visiable)} className='btn btn-sm btn-circle absolute right-2 top-12' > {visiable ? <IoEyeOff className='text-lg'></IoEyeOff> : <IoEye className='text-lg'></IoEye>}  </a>
                                     <label className="label">
                                         <a onClick={() => document.getElementById('my_modal_5').showModal()} href="#" className="link link-hover">Forgot password?</a>
                                     </label>

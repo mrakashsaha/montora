@@ -71,7 +71,7 @@ const NavBar = () => {
                     {/*  */}
 
                     {user && <div className="dropdown-end">
-                        <div className="mx-4 tooltip tooltip-bottom" data-tip={user?.displayName}>
+                        <div className="mx-4 tooltip tooltip-bottom z-10" data-tip={user?.displayName}>
                             <Link to={'/profile'} className="btn btn-ghost btn-circle avatar">
                                 {
                                     user && <div className="w-10 md:w-14 rounded-full">
