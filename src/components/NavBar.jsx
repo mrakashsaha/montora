@@ -83,7 +83,7 @@ const NavBar = () => {
                     </div>}
 
                     {
-                        !loading && (user ? <button onClick={handleSignOut} className="btn btn-md hover:bg-[#ff8900] bg-[#549064] text-white text-lg">Logout</button> : <Link to={'/login'} className="btn btn-md hover:bg-[#ff8900] bg-[#549064] border-none rounded-none text-white text-lg">Login</Link>)
+                        !loading && (user ? <button onClick={handleSignOut} className="btn btn-md rounded-none hover:bg-[#ff8900] bg-[#549064] text-white text-lg">Logout</button> : <Link to={'/login'} className="btn btn-md hover:bg-[#ff8900] bg-[#549064] border-none rounded-none text-white text-lg">Login</Link>)
                     }
 
 
