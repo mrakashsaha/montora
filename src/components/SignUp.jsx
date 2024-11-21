@@ -6,11 +6,13 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import { FaGoogle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import PageTitle from './PageTitle';
+import { IoEye, IoEyeOff } from 'react-icons/io5';
 
 const SignUp = () => {
 
     const { createNewUser, setUser, signInWithGoogle, updateUserProfile} = useContext(AuthContext);
     const [error, setError] = useState (false);
+    const [visiable, setVisiable] = useState (false);
     const navigate = useNavigate();
     const handleSignUpWithEmail = (e) => {
         e.preventDefault();
@@ -97,12 +99,14 @@ const SignUp = () => {
                                     </label>
                                     <input name='photo-url' type="text" placeholder="Enter Photo URL" className="input input-bordered" required />
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control relative">
                                     <label className="label">
                                         <span className="">Password</span>
                                     </label>
-                                    <input name='password' type="password" placeholder="Enter Password" className="input input-bordered" required />
+                                    <input name='password' type={visiable ? "text":"password"} placeholder="Enter Password" className="input input-bordered" required />
+                                    <a onClick={()=>setVisiable(!visiable)} className='btn btn-sm btn-circle absolute right-2 top-12' > {visiable ? <IoEye className='text-lg'></IoEye>: <IoEyeOff className='text-lg'></IoEyeOff>}  </a>
                                 </div>
+
                                 {
                                     error && <p className='text-[#EA4335] text-sm pt-2'>Error: Password must contain uppercase, lowercase and at least 6 characters long.</p>
                                 }

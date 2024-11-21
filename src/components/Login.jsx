@@ -4,13 +4,15 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { toast } from 'react-toastify';
-import { IoCloseCircle } from 'react-icons/io5';
+import { IoCloseCircle, IoEye, IoEyeOff } from 'react-icons/io5';
 import { FaGoogle } from 'react-icons/fa';
 import PageTitle from './PageTitle';
 
 const Login = () => {
 
     const { signInUser, setUser, signInWithGoogle, resetUserPassword } = useContext(AuthContext);
+    
+    const [visiable, setVisiable] = useState (false);
 
     const location = useLocation();
 
@@ -52,8 +54,6 @@ const Login = () => {
                 const user = result.user;
                 setUser(user);
                 navigate(location?.state ? location.state : '/');
-
-
             })
 
             .catch((error) => {
@@ -66,7 +66,8 @@ const Login = () => {
 
     }
 
-    const handleForgetPassword = (e) => {
+
+   const handleForgetPassword = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         resetUserPassword(email)
@@ -98,11 +99,12 @@ const Login = () => {
                                     </label>
                                     <input name='email' type="email" placeholder="Enter Email" className="input input-bordered" required />
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control relative">
                                     <label className="label">
                                         <span className="">Password</span>
                                     </label>
-                                    <input name='password' type="password" placeholder="Enter Password" className="input input-bordered" required />
+                                    <input name='password' type={visiable ? "text":"password"} placeholder="Enter Password" className="input input-bordered" required />
+                                    <a onClick={()=>setVisiable(!visiable)} className='btn btn-sm btn-circle absolute right-2 top-12' > {visiable ? <IoEye className='text-lg'></IoEye>: <IoEyeOff className='text-lg'></IoEyeOff>}  </a>
                                     <label className="label">
                                         <a onClick={() => document.getElementById('my_modal_5').showModal()} href="#" className="link link-hover">Forgot password?</a>
                                     </label>
