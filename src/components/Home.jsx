@@ -2,6 +2,7 @@
 import Banner from './Banner';
 import AdvantureExp from './AdvantureExp';
 import PageTitle from './PageTitle';
+import TopService from './TopService';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <PageTitle title={'Montora | Home'}></PageTitle>
             <Banner></Banner>
             <AdvantureExp></AdvantureExp>
+            <TopService></TopService>
         </div>
     );
 };
