@@ -11,11 +11,11 @@ const ExpCard = ({ cardData }) => {
       }, [])
 
     return (
-        <div data-aos="fade-left">
+        <div data-aos="fade-up" className=''>
             <div className="card bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <div className='w-full h-[250px]'>
-                        <img src={image} alt="image" className="w-full h-full object-cover rounded-xl" />
+                        <img src={image} alt="image" className="w-full h-full rounded-xl" />
                     </div>
                 </figure>
                 <div className="card-body text-xl">

@@ -14,7 +14,7 @@ const FAQ = () => {
                 <h1 className='text-[#ff8900] text-lg md:text-2xl font-semibold text-center uppercase'>A Lot More Questions</h1>
                 <p className='text-3xl md:text-4xl lg:text-6xl font-bold text-center md:w-3/4 lg:w-1/2 p-4 mx-auto'>FREQUENTLY ASKED</p>
             </div>
-            <div data-aos="fade-right" className='text-white space-y-4'>
+            <div data-aos="fade-up" className='text-white space-y-4'>
                 <div className="collapse collapse-arrow rounded-none">
                     <input type="radio" name="my-accordion-3" defaultChecked />
                     <div className="bg-[#04335e] collapse-title text-xl font-medium inline-flex items-center gap-2"> <IoIosCheckboxOutline className='text-3xl'></IoIosCheckboxOutline> What is Montora?</div>

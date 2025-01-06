@@ -87,7 +87,7 @@ const Login = () => {
     return (
         <div>
             <PageTitle title={'Montora | Login to account'}></PageTitle>
-            <div style={{ backgroundImage: `url(${bgImage})` }} className="hero bg-base-200 min-h-screen">
+            <div style={{ 'backgroundImage': `url(${bgImage})`, "filter": "blur(8px)" }} className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col">
                     <h1 className="text-2xl font-bold  mx-auto">Login now!</h1>
                     <div className="card bg-base-100 w-96 shrink-0 shadow-2xl">

@@ -73,37 +73,37 @@ const AdvantureDetails = () => {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-xl">
-                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-up" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Location</h2>
                             <p>{adventure.location}</p>
                         </div>
                     </div>
-                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-up" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Duration</h2>
                             <p>{adventure.duration}</p>
                         </div>
                     </div>
-                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-up" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Cost</h2>
                             <p>${adventure.adventureCost}</p>
                         </div>
                     </div>
-                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-up" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Group Size</h2>
                             <p>{adventure.maxGroupSize}</p>
                         </div>
                     </div>
-                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-up" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Level</h2>
                             <p>{adventure.adventureLevel}</p>
                         </div>
                     </div>
-                    <div data-aos="fade-left" className="card bg-base-100 shadow-md">
+                    <div data-aos="fade-up" className="card bg-base-100 shadow-md">
                         <div className="card-body">
                             <h2 className="card-title">Availability</h2>
                             <p>{adventure.bookingAvailability}</p>
@@ -113,7 +113,7 @@ const AdvantureDetails = () => {
 
 
 
-                <div data-aos="fade-left" className='grid grid-cols-1 md:grid-cols-3 gap-6 text-2xl'>
+                <div data-aos="fade-up" className='grid grid-cols-1 md:grid-cols-3 gap-6 text-2xl'>
                     {/* Included Items Section */}
                     <div className="bg-base-100 shadow-md rounded-lg p-10">
                         <div>
@@ -125,14 +125,14 @@ const AdvantureDetails = () => {
                     </div>
 
                     {/* Eco-Friendly Features Section */}
-                    <div data-aos="fade-left" className="bg-base-100 shadow-md rounded-lg p-10">
+                    <div data-aos="fade-up" className="bg-base-100 shadow-md rounded-lg p-10">
                         <h2 className="text-2xl font-semibold mb-2">Eco-Friendly Features</h2>
                         <ul className="list-disc list-inside space-y-1">
                             {adventure.ecoFriendlyFeatures.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
                     </div>
 
                     {/* Special Instructions Section */}
-                    <div data-aos="fade-left" className="bg-base-100 shadow-md rounded-lg p-10">
+                    <div data-aos="fade-up" className="bg-base-100 shadow-md rounded-lg p-10">
                         <h2 className="text-2xl font-semibold mb-2">Special Instructions</h2>
                         <ul className="list-disc list-inside space-y-1">
                             {adventure.specialInstructions.map((item, idx) => <li key={idx}>{item}</li>)}</ul>

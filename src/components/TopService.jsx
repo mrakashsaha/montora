@@ -12,7 +12,7 @@ const TopService = () => {
         <div className='py-4'>
             <div className="relative h-96 lg:h-[600px] bg-cover bg-center" style={{ backgroundImage: `url(${bgImg})` }}>
                 <div  className="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-white">
-                    <div data-aos="fade-left">
+                    <div data-aos="fade-up" className=''>
                     <div className='bg-[#242f41]/90 p-12 translate-x-0 md:translate-x-1/2 lg:translate-x-3/4 -skew-x-6'>
                         <div className='px-4 space-y-2'>
                             <h4 className="text-2xl md:text-4xl font-bold">Ready For</h4>

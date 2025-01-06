@@ -15,7 +15,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const updateUserProfile = (userInfo) => {
-        return updateProfile (auth.currentUser, userInfo)
+        return updateProfile(auth.currentUser, userInfo)
     }
 
     const signInUser = (email, password) => {
@@ -29,18 +29,18 @@ const AuthProvider = ({ children }) => {
     }
 
     const signInWithGoogle = (googleProvider) => {
-        return signInWithPopup (auth, googleProvider)
+        return signInWithPopup(auth, googleProvider)
     }
 
     const resetUserPassword = (email) => {
-        return sendPasswordResetEmail (auth, email)
+        return sendPasswordResetEmail(auth, email)
     }
-    
+
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
-            setLoading (false);
+            setLoading(false);
         })
         return () => {
             unsubscribe();

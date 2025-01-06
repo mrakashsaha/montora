@@ -75,7 +75,7 @@ const NavBar = () => {
                             <Link to={'/profile'} className="btn btn-ghost btn-circle avatar">
                                 {
                                     user && <div className="w-10 md:w-14 rounded-full">
-                                        <img alt="profile" src={user?.photoURL} />
+                                        <img alt="profile" src={user.photoURL} />
                                     </div>
                                 }
                             </Link>
