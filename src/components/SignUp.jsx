@@ -75,8 +75,8 @@ const SignUp = () => {
     return (
         <div>
             <PageTitle title={'Montora | Sign Up'}></PageTitle>
-            <div className="hero bg-base-200 min-h-screen">
-                <div className="hero-content flex-col">
+            <div style={{ backgroundImage: `url(${bgImage})` }} className="hero bg-base-200 min-h-screen">
+                <div className="hero-content flex-col py-10">
                     <h1 className="text-2xl font-bold  mx-auto">Sign Up Today!</h1>
                     <div className="card bg-base-100 w-96 shrink-0 shadow-2xl">
                         <div className='card-body'>
