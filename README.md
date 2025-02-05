@@ -3,9 +3,9 @@
 ## Overview
 Montora is a blog-style web application designed to promote eco-friendly travel adventures. It provides insights into various adventure activities like mountain treks, allowing users to explore and consult experts for planning their eco-adventure trips. The platform includes authentication, user profile management, and interactive features to enhance engagement.
 
-## Screenshot
-![Montora Screenshot](path/to/screenshot.png)  
-*(Replace with an actual screenshot of your project.)*
+
+![Montora Screenshot](https://raw.githubusercontent.com/mrakashsaha/montora/refs/heads/main/public/MontoraSS.png)  
+
 
 ## Technologies Used
 - **Frontend**: React, React Router, React Icons, Swiper
@@ -28,7 +28,7 @@ Montora is a blog-style web application designed to promote eco-friendly travel 
 ## Dependencies
 The project uses the following dependencies:
 
-### Regular Dependencies
+### Main Dependencies
 ```json
 {
   "dependencies": {
@@ -100,7 +100,7 @@ Follow these steps to set up and run Montora on your local machine:
 
 ## Live Project & Resources
 - **Live Demo**: [Visit Montora](https://montora-adv.web.app/)
-- **GitHub Repository**: [GitHub Link](https://github.com/mrakashsaha/montora) *(Update this link)*
+- **GitHub Repository**: [GitHub Link](https://github.com/mrakashsaha/montora)
 - **Firebase Hosting**: Deployed with Firebase Hosting.
 
 ## Thank You
