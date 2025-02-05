@@ -1,10 +1,10 @@
-# Montora
+# Montora | Blog-Style Web Application
+
+![Montora Screenshot](https://raw.githubusercontent.com/mrakashsaha/montora/refs/heads/main/public/MontoraSS.png) 
+
 
 ## Overview
 Montora is a blog-style web application designed to promote eco-friendly travel adventures. It provides insights into various adventure activities like mountain treks, allowing users to explore and consult experts for planning their eco-adventure trips. The platform includes authentication, user profile management, and interactive features to enhance engagement.
-
-
-![Montora Screenshot](https://raw.githubusercontent.com/mrakashsaha/montora/refs/heads/main/public/MontoraSS.png)  
 
 
 ## Technologies Used
